@@ -76,7 +76,7 @@ bool Stack::isEmpty()
 
 int main(int argc, char* argv[])
 {
-	class Stack s; //defined an instance of Stack class called s
+	class Stack s; //create an instance of Stack class called s
 	s.push(10);
 	s.push(20);
 	s.push(30);

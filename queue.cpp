@@ -3,65 +3,65 @@
 
 #define N 20 //array size
 
-class Queue {
-	int head;
-	int tail;
+	class Queue {
+		int head;
+		int tail;
 
-public:
-	int a[N];
+	public:
+		int a[N];
 
-	Queue() { head = 0; tail = 0; }
-	bool enq(int x);
-	int deq();
-	int peek();
-	bool isEmpty();
-};
+		Queue() { head = 0; tail = 0; }
+		bool enq(int x);
+		int deq();
+		int peek();
+		bool isEmpty();
+	};
 
-//DONE
-bool Queue::enq(int x)
-{
-	if ((head == (tail + 1)) | ((head == 0) & (tail == (N - 1))))
-	{
-		std::cout << "Queue overflow";
-		return false;
-	}
-	else if (tail > (N - 1))
-	{
-		tail = 0;
-		a[tail++] = x;
-		return true;
-	}
-	else
-	{
-		a[tail] = x;
-		tail++;
-		return true;
-	}
-}
 
-//DONE
-int Queue::deq()
-{
-	if (isEmpty())
+	bool Queue::enq(int x)
 	{
-		std::cout << "Queue underflow\n";
-		return -1;
-	}
-	else if (head >= (N - 1))
-	{
-		int x = a[head];
-		head = 0;
-		return x;
-	}
-	else
-	{
-		int x = a[head];
-		head++;
-		return x;
-	}
+		if ((head == (tail + 1)) | ((head == 0) & (tail == (N - 1))))
+		{
+			std::cout << "Queue overflow";
+			return false;
+		}
+		else if (tail > (N - 1))
+		{
+			tail = 0;
+			a[tail++] = x;
+			return true;
+		}
+		else
+		{
+			a[tail] = x;
+			tail++;
+			return true;
+		}
 	}
 
-	//DONE
+
+	int Queue::deq()
+	{
+		if (isEmpty())
+		{
+			std::cout << "Queue underflow\n";
+			return -1;
+		}
+		else if (head >= (N - 1))
+		{
+			int x = a[head];
+			head = 0;
+			return x;
+		}
+		else
+		{
+			int x = a[head];
+			head++;
+			return x;
+		}
+	}
+
+
 	int Queue::peek()
 	{
 		if (isEmpty())
@@ -76,7 +76,7 @@ int Queue::deq()
 		}
 	}
 
-	//DONE
+	
 	bool Queue::isEmpty()
 	{
 		if (head == tail)
@@ -98,7 +98,7 @@ int Queue::deq()
 		s.enq(10);
 		s.enq(20);
 		s.enq(30);
-		std::cout << s.deq() << '\n' << s.deq() << '\n' << s.deq() << '\n';
+		std::cout << s.deq() << '\n' << s.deq() << '\n' << s.deq() << '\n'; //Compiler can evaluate the funtions calls in whichever order it wants
 		std::cout << s.deq() << '\n';
 		s.enq(10);
 		s.enq(20);
