@@ -65,27 +65,20 @@ int get_number(int* array, int size) {
 
 int main(int argc, char* argv)
 {
-	/*	std::cout << fib(5);
-		system("pause");
-		listNode LIST;
-		LIST.value = 1;
-		listNode TAIL;
-		TAIL.value = 2;
-		LIST.next = &TAIL;
-	//	insert_at_tail(&LIST, 5);*/
 	int array[] = { 35, 40, 896, 1, 5, 4, 3, 2, 1, 5, 6 };
+	
 	std::cout << "Original array: ";
 	for (int i = 0; i < 8; i++)
 	{
 		std::cout << array[i] << ' ';
 	}
+	
 	CountingSort(array, 8);
 	std::cout << '\n' << "Sorted array: ";
 	for (int i = 0; i < 8; i++)
 	{
 		std::cout << array[i] << ' ';
 	}
-	//std::cout<< minimumDays(5, 5, grid);
 
 	system("pause");
  	return 0;
