@@ -1,1 +1,1 @@
-Implementation of stack using array C++
+Implementation of fundamental data structures and basic search algorithms

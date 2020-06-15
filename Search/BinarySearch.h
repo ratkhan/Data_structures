@@ -1,5 +1,5 @@
 #pragma once
-//Implementation of Binary search using arrays
+//Implementation of Binary search on sorted array
 
 #ifndef BINARYSEARCH_H
 #define BINARYSEARCH_H
